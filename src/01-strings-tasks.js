@@ -199,9 +199,10 @@ function extractEmails(str) {
  *
  */
 function getRectangleString(width, height) {
-  return `${`┌${'─'.repeat(width - 2)}┐\n`}${`│${' '.repeat(
-    width - 2
-  )}│\n`.repeat(height - 2)}${`└${'─'.repeat(width - 2)}┘`}\n`;
+  const top = `┌${'─'.repeat(width - 2)}┐\n`;
+  const center = `│${' '.repeat(width - 2)}│\n`.repeat(height - 2);
+  const bottom = `└${'─'.repeat(width - 2)}┘`;
+  return `${top}${center}${bottom}\n`;
 }
 
 /**
